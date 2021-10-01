@@ -1,0 +1,375 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0023)https://matplotlib.org/ -->
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Matplotlib: Python plotting — Matplotlib 3.4.3 documentation</title>
+<link rel="stylesheet" href="./Matplotlib_ Python plotting — Matplotlib 3.4.3 documentation_files/pygments.css" type="text/css">
+<link rel="stylesheet" href="./Matplotlib_ Python plotting — Matplotlib 3.4.3 documentation_files/mpl.css" type="text/css">
+<link rel="stylesheet" type="text/css" href="./Matplotlib_ Python plotting — Matplotlib 3.4.3 documentation_files/graphviz.css">
+<link rel="stylesheet" type="text/css" href="./Matplotlib_ Python plotting — Matplotlib 3.4.3 documentation_files/copybutton.css">
+<link rel="stylesheet" type="text/css" href="./Matplotlib_ Python plotting — Matplotlib 3.4.3 documentation_files/gallery.css">
+<link rel="stylesheet" type="text/css" href="./Matplotlib_ Python plotting — Matplotlib 3.4.3 documentation_files/gallery-binder.css">
+<link rel="stylesheet" type="text/css" href="./Matplotlib_ Python plotting — Matplotlib 3.4.3 documentation_files/gallery-dataframe.css">
+<link rel="stylesheet" type="text/css" href="./Matplotlib_ Python plotting — Matplotlib 3.4.3 documentation_files/gallery-rendered-html.css">
+<script async="" src="./Matplotlib_ Python plotting — Matplotlib 3.4.3 documentation_files/analytics.js.download"></script><script id="documentation_options" data-url_root="./" src="./Matplotlib_ Python plotting — Matplotlib 3.4.3 documentation_files/documentation_options.js.download" type="text/javascript"></script>
+<script src="./Matplotlib_ Python plotting — Matplotlib 3.4.3 documentation_files/jquery.js.download" type="text/javascript"></script>
+<script src="./Matplotlib_ Python plotting — Matplotlib 3.4.3 documentation_files/underscore.js.download" type="text/javascript"></script>
+<script src="./Matplotlib_ Python plotting — Matplotlib 3.4.3 documentation_files/doctools.js.download" type="text/javascript"></script>
+<script src="./Matplotlib_ Python plotting — Matplotlib 3.4.3 documentation_files/clipboard.min.js.download" type="text/javascript"></script>
+<script src="./Matplotlib_ Python plotting — Matplotlib 3.4.3 documentation_files/copybutton.js.download" type="text/javascript"></script>
+
+<link rel="search" type="application/opensearchdescription+xml" title="Search within Matplotlib 3.4.3 documentation" href="https://matplotlib.org/_static/opensearch.xml">
+<link rel="shortcut icon" href="https://matplotlib.org/_static/favicon.ico">
+<link rel="index" title="Index" href="https://matplotlib.org/stable/genindex.html">
+<link rel="search" title="Search" href="https://matplotlib.org/stable/search.html">
+<link rel="top" title="Matplotlib 3.4.3 documentation" href="https://matplotlib.org/#">
+<link rel="canonical" href="https://matplotlib.org/stable/index.html">
+<link rel="stylesheet" href="./Matplotlib_ Python plotting — Matplotlib 3.4.3 documentation_files/custom.css" type="text/css">
+<meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9">
+<script data-dapp-detection="">!function(){let e=!1;function n(){if(!e){const n=document.createElement("meta");n.name="dapp-detected",document.head.appendChild(n),e=!0}}if(window.hasOwnProperty("ethereum")){if(window.__disableDappDetectionInsertion=!0,void 0===window.ethereum)return;n()}else{var t=window.ethereum;Object.defineProperty(window,"ethereum",{configurable:!0,enumerable:!1,set:function(e){window.__disableDappDetectionInsertion||n(),t=e},get:function(){if(!window.__disableDappDetectionInsertion){const e=arguments.callee;e&&e.caller&&e.caller.toString&&-1!==e.caller.toString().indexOf("getOwnPropertyNames")||n()}return t}})}}();</script><script type="text/javascript" async="" src="./Matplotlib_ Python plotting — Matplotlib 3.4.3 documentation_files/MathJax.js.download"></script><style type="text/css">.MathJax_Hover_Frame {border-radius: .25em; -webkit-border-radius: .25em; -moz-border-radius: .25em; -khtml-border-radius: .25em; box-shadow: 0px 0px 15px #83A; -webkit-box-shadow: 0px 0px 15px #83A; -moz-box-shadow: 0px 0px 15px #83A; -khtml-box-shadow: 0px 0px 15px #83A; border: 1px solid #A6D ! important; display: inline-block; position: absolute}
+.MathJax_Menu_Button .MathJax_Hover_Arrow {position: absolute; cursor: pointer; display: inline-block; border: 2px solid #AAA; border-radius: 4px; -webkit-border-radius: 4px; -moz-border-radius: 4px; -khtml-border-radius: 4px; font-family: 'Courier New',Courier; font-size: 9px; color: #F0F0F0}
+.MathJax_Menu_Button .MathJax_Hover_Arrow span {display: block; background-color: #AAA; border: 1px solid; border-radius: 3px; line-height: 0; padding: 4px}
+.MathJax_Hover_Arrow:hover {color: white!important; border: 2px solid #CCC!important}
+.MathJax_Hover_Arrow:hover span {background-color: #CCC!important}
+</style><style type="text/css">#MathJax_About {position: fixed; left: 50%; width: auto; text-align: center; border: 3px outset; padding: 1em 2em; background-color: #DDDDDD; color: black; cursor: default; font-family: message-box; font-size: 120%; font-style: normal; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; border-radius: 15px; -webkit-border-radius: 15px; -moz-border-radius: 15px; -khtml-border-radius: 15px; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+#MathJax_About.MathJax_MousePost {outline: none}
+.MathJax_Menu {position: absolute; background-color: white; color: black; width: auto; padding: 2px; border: 1px solid #CCCCCC; margin: 0; cursor: default; font: menu; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+.MathJax_MenuItem {padding: 2px 2em; background: transparent}
+.MathJax_MenuArrow {position: absolute; right: .5em; padding-top: .25em; color: #666666; font-size: .75em}
+.MathJax_MenuActive .MathJax_MenuArrow {color: white}
+.MathJax_MenuArrow.RTL {left: .5em; right: auto}
+.MathJax_MenuCheck {position: absolute; left: .7em}
+.MathJax_MenuCheck.RTL {right: .7em; left: auto}
+.MathJax_MenuRadioCheck {position: absolute; left: 1em}
+.MathJax_MenuRadioCheck.RTL {right: 1em; left: auto}
+.MathJax_MenuLabel {padding: 2px 2em 4px 1.33em; font-style: italic}
+.MathJax_MenuRule {border-top: 1px solid #CCCCCC; margin: 4px 1px 0px}
+.MathJax_MenuDisabled {color: GrayText}
+.MathJax_MenuActive {background-color: Highlight; color: HighlightText}
+.MathJax_MenuDisabled:focus, .MathJax_MenuLabel:focus {background-color: #E8E8E8}
+.MathJax_ContextMenu:focus {outline: none}
+.MathJax_ContextMenu .MathJax_MenuItem:focus {outline: none}
+#MathJax_AboutClose {top: .2em; right: .2em}
+.MathJax_Menu .MathJax_MenuClose {top: -10px; left: -10px}
+.MathJax_MenuClose {position: absolute; cursor: pointer; display: inline-block; border: 2px solid #AAA; border-radius: 18px; -webkit-border-radius: 18px; -moz-border-radius: 18px; -khtml-border-radius: 18px; font-family: 'Courier New',Courier; font-size: 24px; color: #F0F0F0}
+.MathJax_MenuClose span {display: block; background-color: #AAA; border: 1.5px solid; border-radius: 18px; -webkit-border-radius: 18px; -moz-border-radius: 18px; -khtml-border-radius: 18px; line-height: 0; padding: 8px 0 6px}
+.MathJax_MenuClose:hover {color: white!important; border: 2px solid #CCC!important}
+.MathJax_MenuClose:hover span {background-color: #CCC!important}
+.MathJax_MenuClose:hover:focus {outline: none}
+</style><style type="text/css">.MathJax_Preview .MJXf-math {color: inherit!important}
+</style><style type="text/css">.MJX_Assistive_MathML {position: absolute!important; top: 0; left: 0; clip: rect(1px, 1px, 1px, 1px); padding: 1px 0 0 0!important; border: 0!important; height: 1px!important; width: 1px!important; overflow: hidden!important; display: block!important; -webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none}
+.MJX_Assistive_MathML.MJX_Assistive_MathML_Block {width: 100%!important}
+</style><style type="text/css">#MathJax_Zoom {position: absolute; background-color: #F0F0F0; overflow: auto; display: block; z-index: 301; padding: .5em; border: 1px solid black; margin: 0; font-weight: normal; font-style: normal; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; -webkit-box-sizing: content-box; -moz-box-sizing: content-box; box-sizing: content-box; box-shadow: 5px 5px 15px #AAAAAA; -webkit-box-shadow: 5px 5px 15px #AAAAAA; -moz-box-shadow: 5px 5px 15px #AAAAAA; -khtml-box-shadow: 5px 5px 15px #AAAAAA; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+#MathJax_ZoomOverlay {position: absolute; left: 0; top: 0; z-index: 300; display: inline-block; width: 100%; height: 100%; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
+#MathJax_ZoomFrame {position: relative; display: inline-block; height: 0; width: 0}
+#MathJax_ZoomEventTrap {position: absolute; left: 0; top: 0; z-index: 302; display: inline-block; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
+</style><style type="text/css">.MathJax_Preview {color: #888}
+#MathJax_Message {position: fixed; left: 1em; bottom: 1.5em; background-color: #E6E6E6; border: 1px solid #959595; margin: 0px; padding: 2px 8px; z-index: 102; color: black; font-size: 80%; width: auto; white-space: nowrap}
+#MathJax_MSIE_Frame {position: absolute; top: 0; left: 0; width: 0px; z-index: 101; border: 0px; margin: 0px; padding: 0px}
+.MathJax_Error {color: #CC0000; font-style: italic}
+</style><style type="text/css">.MJXp-script {font-size: .8em}
+.MJXp-right {-webkit-transform-origin: right; -moz-transform-origin: right; -ms-transform-origin: right; -o-transform-origin: right; transform-origin: right}
+.MJXp-bold {font-weight: bold}
+.MJXp-italic {font-style: italic}
+.MJXp-scr {font-family: MathJax_Script,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-frak {font-family: MathJax_Fraktur,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-sf {font-family: MathJax_SansSerif,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-cal {font-family: MathJax_Caligraphic,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-mono {font-family: MathJax_Typewriter,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-largeop {font-size: 150%}
+.MJXp-largeop.MJXp-int {vertical-align: -.2em}
+.MJXp-math {display: inline-block; line-height: 1.2; text-indent: 0; font-family: 'Times New Roman',Times,STIXGeneral,serif; white-space: nowrap; border-collapse: collapse}
+.MJXp-display {display: block; text-align: center; margin: 1em 0}
+.MJXp-math span {display: inline-block}
+.MJXp-box {display: block!important; text-align: center}
+.MJXp-box:after {content: " "}
+.MJXp-rule {display: block!important; margin-top: .1em}
+.MJXp-char {display: block!important}
+.MJXp-mo {margin: 0 .15em}
+.MJXp-mfrac {margin: 0 .125em; vertical-align: .25em}
+.MJXp-denom {display: inline-table!important; width: 100%}
+.MJXp-denom > * {display: table-row!important}
+.MJXp-surd {vertical-align: top}
+.MJXp-surd > * {display: block!important}
+.MJXp-script-box > *  {display: table!important; height: 50%}
+.MJXp-script-box > * > * {display: table-cell!important; vertical-align: top}
+.MJXp-script-box > *:last-child > * {vertical-align: bottom}
+.MJXp-script-box > * > * > * {display: block!important}
+.MJXp-mphantom {visibility: hidden}
+.MJXp-munderover, .MJXp-munder {display: inline-table!important}
+.MJXp-over {display: inline-block!important; text-align: center}
+.MJXp-over > * {display: block!important}
+.MJXp-munderover > *, .MJXp-munder > * {display: table-row!important}
+.MJXp-mtable {vertical-align: .25em; margin: 0 .125em}
+.MJXp-mtable > * {display: inline-table!important; vertical-align: middle}
+.MJXp-mtr {display: table-row!important}
+.MJXp-mtd {display: table-cell!important; text-align: center; padding: .5em 0 0 .5em}
+.MJXp-mtr > .MJXp-mtd:first-child {padding-left: 0}
+.MJXp-mtr:first-child > .MJXp-mtd {padding-top: 0}
+.MJXp-mlabeledtr {display: table-row!important}
+.MJXp-mlabeledtr > .MJXp-mtd:first-child {padding-left: 0}
+.MJXp-mlabeledtr:first-child > .MJXp-mtd {padding-top: 0}
+.MJXp-merror {background-color: #FFFF88; color: #CC0000; border: 1px solid #CC0000; padding: 1px 3px; font-style: normal; font-size: 90%}
+.MJXp-scale0 {-webkit-transform: scaleX(.0); -moz-transform: scaleX(.0); -ms-transform: scaleX(.0); -o-transform: scaleX(.0); transform: scaleX(.0)}
+.MJXp-scale1 {-webkit-transform: scaleX(.1); -moz-transform: scaleX(.1); -ms-transform: scaleX(.1); -o-transform: scaleX(.1); transform: scaleX(.1)}
+.MJXp-scale2 {-webkit-transform: scaleX(.2); -moz-transform: scaleX(.2); -ms-transform: scaleX(.2); -o-transform: scaleX(.2); transform: scaleX(.2)}
+.MJXp-scale3 {-webkit-transform: scaleX(.3); -moz-transform: scaleX(.3); -ms-transform: scaleX(.3); -o-transform: scaleX(.3); transform: scaleX(.3)}
+.MJXp-scale4 {-webkit-transform: scaleX(.4); -moz-transform: scaleX(.4); -ms-transform: scaleX(.4); -o-transform: scaleX(.4); transform: scaleX(.4)}
+.MJXp-scale5 {-webkit-transform: scaleX(.5); -moz-transform: scaleX(.5); -ms-transform: scaleX(.5); -o-transform: scaleX(.5); transform: scaleX(.5)}
+.MJXp-scale6 {-webkit-transform: scaleX(.6); -moz-transform: scaleX(.6); -ms-transform: scaleX(.6); -o-transform: scaleX(.6); transform: scaleX(.6)}
+.MJXp-scale7 {-webkit-transform: scaleX(.7); -moz-transform: scaleX(.7); -ms-transform: scaleX(.7); -o-transform: scaleX(.7); transform: scaleX(.7)}
+.MJXp-scale8 {-webkit-transform: scaleX(.8); -moz-transform: scaleX(.8); -ms-transform: scaleX(.8); -o-transform: scaleX(.8); transform: scaleX(.8)}
+.MJXp-scale9 {-webkit-transform: scaleX(.9); -moz-transform: scaleX(.9); -ms-transform: scaleX(.9); -o-transform: scaleX(.9); transform: scaleX(.9)}
+.MathJax_PHTML .noError {vertical-align: ; font-size: 90%; text-align: left; color: black; padding: 1px 3px; border: 1px solid}
+</style></head>
+<body><div id="MathJax_Message" style="display: none;"></div>
+
+<div style="background-color: white; text-align: left; padding: 10px 10px 15px 15px; position: relative;">
+<a href="https://matplotlib.org/stable/index.html">
+<div style="float: left; position: absolute; width: 496px; bottom: 0; padding-bottom: 24px"><span style="float: right; color: #789; background: white">Version 3.4.3</span></div>
+<img src="./Matplotlib_ Python plotting — Matplotlib 3.4.3 documentation_files/logo2_compressed.svg" height="125px" border="0" alt="matplotlib"></a>
+
+<div id="forkongithub"><a href="https://github.com/matplotlib/matplotlib">Fork me on GitHub</a></div>
+</div>
+<nav class="main-nav">
+<ul>
+<li><a href="https://matplotlib.org/stable/users/installing.html">Installation</a></li>
+<li><a href="https://matplotlib.org/stable/contents.html">Documentation</a></li>
+<li><a href="https://matplotlib.org/stable/gallery/index.html">Examples</a></li>
+<li><a href="https://matplotlib.org/stable/tutorials/index.html">Tutorials</a></li>
+<li><a href="https://matplotlib.org/stable/devel/index.html">Contributing</a></li>
+<li class="nav-right">
+<form class="search" action="https://matplotlib.org/stable/search.html" method="get">
+<input type="text" name="q" aria-labelledby="searchlabel" placeholder="Search" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+</form>
+</li>
+</ul>
+</nav>
+<div class="related" role="navigation" aria-label="related navigation">
+<h3>Navigation</h3>
+<ul>
+<li class="right" style="margin-right: 10px">
+<a href="https://matplotlib.org/stable/genindex.html" title="General Index" accesskey="I">index</a></li>
+<li class="right">
+<a href="https://matplotlib.org/stable/py-modindex.html" title="Python Module Index">modules</a> |</li>
+ <li><a href="https://matplotlib.org/stable/index.html">home</a>|&nbsp;</li>
+<li><a href="https://matplotlib.org/stable/contents.html">contents</a> »</li>
+<li class="nav-item nav-item-this"><a href="https://matplotlib.org/stable/index.html">Matplotlib: Python plotting</a></li>
+</ul>
+</div>
+<div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+<div class="sphinxsidebarwrapper"><div class="sidebar-versions"><p><strong>Latest stable release</strong><br>
+3.4.3: <a href="https://matplotlib.org/stable/index.html">docs</a> | <a href="https://matplotlib.org/stable/users/whats_new.html">changelog</a></p>
+<p><strong>Last release for Python 2</strong><br>
+2.2.5: <a href="https://matplotlib.org/2.2.5/index.html">docs</a> | <a href="https://matplotlib.org/2.2.5/users/whats_new.html">changelog</a></p>
+<p><strong>Development version</strong><br>
+<a href="https://matplotlib.org/devdocs/index.html">docs</a></p>
+</div>
+<div class="sphinxsidebarwrapper">
+<h3>Matplotlib cheatsheets</h3>
+<a href="https://github.com/matplotlib/cheatsheets#cheatsheets">
+<img src="./Matplotlib_ Python plotting — Matplotlib 3.4.3 documentation_files/mpl_cheatsheet1.webp" alt="Matplotlib cheatsheets" srcset="stable/_static/mpl_cheatsheet1.png 1x, stable/_static/mpl_cheatsheet1_2x.png 2x">
+</a>
+</div>
+<div id="sidebar-donations">
+<a href="https://numfocus.org/donate-to-matplotlib" target="_blank"> <span class="mpl-button donate_button">Support Matplotlib</span></a>
+</div>
+</div>
+</div>
+<div class="document">
+<div class="documentwrapper">
+<div class="bodywrapper">
+<div class="body" role="main">
+<span class="target" id="module-matplotlib"></span><div class="section" id="matplotlib-visualization-with-python">
+<h1>Matplotlib: Visualization with Python<a class="headerlink" href="https://matplotlib.org/stable/#matplotlib-visualization-with-python" title="Permalink to this headline">¶</a></h1>
+<p>Matplotlib is a comprehensive library for creating static, animated,
+and interactive visualizations in Python.</p>
+<div class="responsive_screenshots">
+<a href="https://matplotlib.org/stable/tutorials/introductory/sample_plots.html">
+<div class="responsive_subfig">
+<img align="middle" src="./Matplotlib_ Python plotting — Matplotlib 3.4.3 documentation_files/sphx_glr_membrane_thumb.webp" border="0" alt="screenshots">
+</div>
+<div class="responsive_subfig">
+<img align="middle" src="./Matplotlib_ Python plotting — Matplotlib 3.4.3 documentation_files/sphx_glr_histogram_thumb.webp" border="0" alt="screenshots">
+</div>
+<div class="responsive_subfig">
+<img align="middle" src="./Matplotlib_ Python plotting — Matplotlib 3.4.3 documentation_files/sphx_glr_contour_thumb.webp" border="0" alt="screenshots">
+</div>
+<div class="responsive_subfig">
+<img align="middle" src="./Matplotlib_ Python plotting — Matplotlib 3.4.3 documentation_files/sphx_glr_3D_thumb.webp" border="0" alt="screenshots">
+</div>
+</a>
+</div>
+<span class="clear_screenshots"></span><p>Matplotlib makes easy things easy and hard things possible.</p>
+<div class="bullet-box-container docutils container">
+<div class="bullet-box docutils container">
+<p>Create</p>
+<ul class="simple">
+<li>Develop <a class="reference external" href="https://matplotlib.org/stable/gallery/index.html">publication quality plots</a> with just a few lines of code</li>
+<li>Use <a class="reference external" href="https://matplotlib.org/stable/gallery/index.html#event-handling">interactive figures</a> that can zoom, pan, update...</li>
+</ul>
+</div>
+<div class="bullet-box docutils container">
+<p>Customize</p>
+<ul class="simple">
+<li><a class="reference external" href="https://matplotlib.org/stable/tutorials/index.html#tutorials">Take full control</a> of line styles, font properties, axes properties...</li>
+<li><a class="reference external" href="https://matplotlib.org/stable/api/index_backend_api.html">Export and embed</a> to a number of file formats and interactive environments</li>
+</ul>
+</div>
+<div class="bullet-box docutils container">
+<p>Extend</p>
+<ul class="simple">
+<li>Explore tailored functionality provided by
+<a class="reference internal" href="https://matplotlib.org/stable/thirdpartypackages/index.html"><span class="doc">third party packages</span></a></li>
+<li>Learn more about Matplotlib through the many
+<a class="reference internal" href="https://matplotlib.org/stable/resources/index.html"><span class="doc">external learning resources</span></a></li>
+</ul>
+</div>
+</div>
+<div class="section" id="documentation">
+<h2>Documentation<a class="headerlink" href="https://matplotlib.org/stable/#documentation" title="Permalink to this headline">¶</a></h2>
+<p>To get started, read the <a class="reference internal" href="https://matplotlib.org/stable/users/index.html"><span class="doc">User's Guide</span></a>.</p>
+<p>Trying to learn how to do a particular kind of plot? Check out the
+<a class="reference internal" href="https://matplotlib.org/stable/gallery/index.html"><span class="doc">examples gallery</span></a> or the <a class="reference internal" href="https://matplotlib.org/stable/api/pyplot_summary.html"><span class="doc">list of plotting commands</span></a>.</p>
+</div>
+<div class="section" id="join-our-community">
+<h2>Join our community!<a class="headerlink" href="https://matplotlib.org/stable/#join-our-community" title="Permalink to this headline">¶</a></h2>
+<p>Matplotlib is a welcoming, inclusive project, and everyone within the community
+is expected to abide by our <a class="reference external" href="https://github.com/matplotlib/matplotlib/blob/master/CODE_OF_CONDUCT.md">code of conduct</a>.</p>
+<h3>Get help</h3>
+<div class="box">
+<div class="box-item">
+<img src="./Matplotlib_ Python plotting — Matplotlib 3.4.3 documentation_files/discourse-brands.svg" alt="Discourse">
+<p>Join our community at <a href="https://discourse.matplotlib.org/">discourse.matplotlib.org</a>
+to get help, discuss contributing &amp; development, and share your work.</p>
+</div>
+<div class="box-item">
+<img src="./Matplotlib_ Python plotting — Matplotlib 3.4.3 documentation_files/question-circle-regular.svg" alt="Questions">
+<p>If you have questions, be sure to check the <a href="https://matplotlib.org/stable/faq/index.html">FAQ</a>,
+the <a href="https://matplotlib.org/stable/api/index.html">API</a> docs. The full text
+<a href="https://matplotlib.org/stable/search.html">search</a> is a good way to discover the docs including the many examples.</p>
+</div>
+<div class="box-item">
+<img src="./Matplotlib_ Python plotting — Matplotlib 3.4.3 documentation_files/stack-overflow-brands.svg" alt="Stackoverflow">
+<p>Check out the Matplotlib tag on <a href="https://stackoverflow.com/questions/tagged/matplotlib">stackoverflow</a>.</p>
+</div>
+<div class="box-item">
+<img src="./Matplotlib_ Python plotting — Matplotlib 3.4.3 documentation_files/gitter-brands.svg" alt="Gitter">
+<p>Short questions may be posted on the <a href="https://gitter.im/matplotlib/matplotlib">gitter channel</a>.</p>
+</div>
+</div>
+<hr class="box-sep">
+<h3>News</h3>
+<div class="box">
+<div class="box-item">
+<img src="./Matplotlib_ Python plotting — Matplotlib 3.4.3 documentation_files/plus-square-regular.svg" alt="News">
+<p>To keep up to date with what's going on in Matplotlib, see the
+<a href="https://matplotlib.org/stable/users/whats_new.html">what's new</a> page or browse the
+<a href="https://github.com/matplotlib/matplotlib">source code</a>. Anything that could
+require changes to your existing code is logged in the
+<a href="https://matplotlib.org/stable/api/api_changes.html">API changes</a> file.</p>
+</div>
+<div class="box-item">
+<img src="./Matplotlib_ Python plotting — Matplotlib 3.4.3 documentation_files/hashtag-solid.svg" alt="Social media">
+<ul>
+<li>Tweet us at <a href="https://twitter.com/matplotlib">@matplotlib</a>!</li>
+<li>See cool plots on <a href="https://www.instagram.com/matplotart/">@matplotart</a> Instagram!</li>
+<li>Check out our <a href="https://matplotlib.org/matplotblog/">Blog</a>!</li>
+</ul>
+</div>
+</div>
+<hr class="box-sep">
+<h3>Development</h3>
+<div class="box">
+<div class="box-item">
+<img src="./Matplotlib_ Python plotting — Matplotlib 3.4.3 documentation_files/github-brands.svg" alt="Github">
+<p>Matplotlib is hosted on <a href="https://github.com/matplotlib/matplotlib">GitHub</a>.</p>
+<ul>
+<li>File bugs and feature requests on the <a href="https://github.com/matplotlib/matplotlib/issues">issue tracker</a>.</li>
+<li><a href="https://github.com/matplotlib/matplotlib/pulls">Pull requests</a> are always welcome.</li>
+</ul>
+<p>It is a good idea to ping us on <a href="https://discourse.matplotlib.org/">Discourse</a> as well.</p>
+</div>
+<div class="box-item">
+<img src="./Matplotlib_ Python plotting — Matplotlib 3.4.3 documentation_files/envelope-regular.svg" alt="Mailing lists">
+<p>Mailing lists</p>
+<ul>
+<li><a href="https://mail.python.org/mailman/listinfo/matplotlib-users">matplotlib-users</a> for usage questions</li>
+<li><a href="https://mail.python.org/mailman/listinfo/matplotlib-devel">matplotlib-devel</a> for development</li>
+<li><a href="https://mail.python.org/mailman/listinfo/matplotlib-announce">matplotlib-announce</a> for project announcements</li>
+</ul>
+</div>
+</div><div class="section" id="toolkits">
+<h3>Toolkits<a class="headerlink" href="https://matplotlib.org/stable/#toolkits" title="Permalink to this headline">¶</a></h3>
+<p>Matplotlib ships with several add-on <a class="reference internal" href="https://matplotlib.org/stable/api/toolkits/index.html"><span class="doc">toolkits</span></a>,
+including 3D plotting with <a class="reference internal" href="https://matplotlib.org/stable/api/toolkits/mplot3d.html#module-mpl_toolkits.mplot3d" title="mpl_toolkits.mplot3d"><code class="xref py py-obj docutils literal notranslate"><span class="pre">mplot3d</span></code></a>, axes helpers in <a class="reference internal" href="https://matplotlib.org/stable/api/toolkits/axes_grid1.html#module-mpl_toolkits.axes_grid1" title="mpl_toolkits.axes_grid1"><code class="xref py py-obj docutils literal notranslate"><span class="pre">axes_grid1</span></code></a> and axis
+helpers in <a class="reference internal" href="https://matplotlib.org/stable/api/toolkits/axisartist.html#module-mpl_toolkits.axisartist" title="mpl_toolkits.axisartist"><code class="xref py py-obj docutils literal notranslate"><span class="pre">axisartist</span></code></a>.</p>
+</div>
+<div class="section" id="third-party-packages">
+<h3>Third party packages<a class="headerlink" href="https://matplotlib.org/stable/#third-party-packages" title="Permalink to this headline">¶</a></h3>
+<p>A large number of <a class="reference internal" href="https://matplotlib.org/stable/thirdpartypackages/index.html"><span class="doc">third party packages</span></a>
+extend and build on Matplotlib functionality, including several higher-level
+plotting interfaces (<a class="reference external" href="https://seaborn.pydata.org/">seaborn</a>, <a class="reference external" href="https://holoviews.org/">HoloViews</a>, <a class="reference external" href="https://yhat.github.io/ggpy/">ggplot</a>, ...), and a projection
+and mapping toolkit (<a class="reference external" href="https://scitools.org.uk/cartopy/docs/latest">Cartopy</a>).</p>
+</div>
+<div class="section" id="citing-matplotlib">
+<h3>Citing Matplotlib<a class="headerlink" href="https://matplotlib.org/stable/#citing-matplotlib" title="Permalink to this headline">¶</a></h3>
+<p>Matplotlib is the brainchild of John Hunter (1968-2012), who, along with its
+many contributors, have put an immeasurable amount of time and effort into
+producing a piece of software utilized by thousands of scientists worldwide.</p>
+<p>If Matplotlib contributes to a project that leads to a scientific publication,
+please acknowledge this work by citing the project. A <a class="reference internal" href="https://matplotlib.org/stable/citing.html"><span class="doc">ready-made citation
+entry</span></a> is available.</p>
+</div>
+<div class="section" id="open-source">
+<h3>Open source<a class="headerlink" href="https://matplotlib.org/stable/#open-source" title="Permalink to this headline">¶</a></h3>
+<a href="https://numfocus.org/">
+<img src="./Matplotlib_ Python plotting — Matplotlib 3.4.3 documentation_files/numfocus_badge.webp" alt="A Fiscally Sponsored Project of NUMFocus" style="float:right; margin-left:20px">
+</a><p>Matplotlib is a Sponsored Project of NumFOCUS, a 501(c)(3) nonprofit
+charity in the United States. NumFOCUS provides Matplotlib with
+fiscal, legal, and administrative support to help ensure the health
+and sustainability of the project. Visit <a class="reference external" href="https://numfocus.org/">numfocus.org</a> for more
+information.</p>
+<p>Donations to Matplotlib are managed by NumFOCUS. For donors in the
+United States, your gift is tax-deductible to the extent provided by
+law. As with any donation, you should consult with your tax adviser
+about your particular tax situation.</p>
+<p>Please consider <a class="reference external" href="https://numfocus.org/donate-to-matplotlib">donating to the Matplotlib project</a> through
+the NumFOCUS organization or to the <a class="reference external" href="https://numfocus.org/programs/john-hunter-technology-fellowship/">John Hunter Technology Fellowship</a>.</p>
+<p>The <a class="reference internal" href="https://matplotlib.org/stable/users/license.html"><span class="doc">Matplotlib license</span></a> is based on the <a class="reference external" href="https://www.python.org/psf/license">Python Software
+Foundation (PSF) license</a>.</p>
+<p>There is an active developer community and a long list of people who have made
+significant <a class="reference internal" href="https://matplotlib.org/stable/users/credits.html"><span class="doc">contributions</span></a>.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="clearer"></div>
+</div>
+<footer>
+<div class="footer">
+© Copyright 2002 - 2012 John Hunter, Darren Dale, Eric Firing, Michael Droettboom and the Matplotlib development team; 2012 - 2021 The Matplotlib development team.
+<br>
+Last updated on Aug 13, 2021.
+Created using
+<a href="http://sphinx-doc.org/">Sphinx</a> 3.4.3.
+Doc version v3.4.3-2-ge48e4acce0.
+</div>
+</footer>
+<script type="text/javascript">
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-55954603-1', 'auto');
+        ga('send', 'pageview');
+
+</script>
+
+
+</body></html>
